@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
  
     console.log(argsList);
  
-    if (argsList[2] == undefined) argsList[2] = "#eeeeee";
+    if (argsList[2] == undefined) argsList[2] = "PURPLE";
     if (argsList[3] == undefined) argsList[3] = "📯⦒mededelingen";
  
     var options = {
