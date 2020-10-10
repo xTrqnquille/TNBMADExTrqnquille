@@ -60,13 +60,13 @@ client.on("messageDelete", messageDeleted => {
 
 client.on("guildMemberAdd", member => {
  
-    var role = member.guild.roles.cache.get('755033917547085841');
+    var role = member.guild.roles.cache.get('764408213679636502');
  
     if (!role) return;
 
     member.roles.add(role);
 
-    const channel = member.guild.channels.cache.get('755033917559668764');
+    const channel = member.guild.channels.cache.get('764400179226345484');
  
     if (!channel) return;
  
