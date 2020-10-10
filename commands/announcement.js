@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
  
  
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("sorry jij kan dit niet");
+    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("sorry you can't do that command");
  
     var seperator = "|";
  
@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
     console.log(argsList);
  
     if (argsList[2] == undefined) argsList[2] = "#eeeeee";
-    if (argsList[3] == undefined) argsList[3] = "📯⦒announcements";
+    if (argsList[3] == undefined) argsList[3] = "📯⦒mededelingen";
  
     var options = {
  

@@ -12,11 +12,11 @@ module.exports.run = async(client, message, args) => {
 
         if(result == "Scissors") {
 
-        return message.channel.send(`I got ${result} :notepad_spiral:, I WON GG!`);
+        return message.channel.send(`I got ${result} :scissors:, You WON GG!`);
 
     } else if(result == "Paper") {
 
-        return message.channel.send(`I got ${result} :scissors:, You WON GG!`);
+        return message.channel.send(`I got ${result} :notepad_spiral:, I WON GG!`);
 
     } else if(result == "Rock") {
 
@@ -48,15 +48,15 @@ else if (args[0].toUpperCase() == "PAPER") {
 
         if(result == "Scissors") {
 
-        return message.channel.send(`I got ${result} :notepad_spiral:, !`);
-
-    } else if(result == "Scissors") {
-
-        return message.channel.send(`I got ${result} :scissors:, I WON GG!`);
+        return message.channel.send(`I got ${result} :scissors:, it's a tie GG!!`);
 
     } else if(result == "Rock") {
 
-        return message.channel.send(`I got ${result} :moyai:, You WON GG!`);
+        return message.channel.send(`I got ${result} :moyai:, I WON GG!`);
+
+    } else if(result == "Paper") {
+
+        return message.channel.send(`I got ${result} :notepad_spiral:, You WON GG!`);
 
         }
     
