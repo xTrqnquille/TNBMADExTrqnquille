@@ -4,6 +4,8 @@ module.exports.run = async(client, message, args) => {
 
     const catergoryID = "764406900858814466"
 
+    var reason = args.slice(2).join(" ");
+
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("You Can't use that command.");
 
     if (message.channel.parentID == catergoryID) {
@@ -16,7 +18,7 @@ module.exports.run = async(client, message, args) => {
 
     var embedCreateTicket = new discord.MessageEmbed()
         .setTitle("Ticket, " + message.channel.name)
-        .setDescription("Ticket done")
+        .setDescription(`Ticket Closed • Closed by: ${message.author} • Reason: ${reason} `)
         .setFooter("Ticket Closed • Close Date:")
         .setTimestamp();
 
