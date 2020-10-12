@@ -53,7 +53,7 @@ module.exports.run = async(bot, message, args) => {
                     var embedParent = new discord.MessageEmbed()
                     .setTitle(`Goededag ${message.author.username}`)
                     .setDescription("Bedankt voor uw Ticket, ons Staff-Team zal u zo snel mogelijk helpen. \n Stel uw vraag, en binnen 24 uur krijgt u een antwoord! \n Veel succes!")
-                    .setFooter(`Datum`)
+                    .setFooter(` © TeaNetwork • Datum`)
                     .setColor("PURPLE")
                     .setTimestamp()
 

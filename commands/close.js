@@ -19,7 +19,7 @@ module.exports.run = async(client, message, args) => {
     var embedCreateTicket = new discord.MessageEmbed()
         .setTitle("Ticket, " + message.channel.name)
         .setDescription(`Ticket Closed • Closed by: ${message.author} • Reason: ${reason} `)
-        .setFooter("Ticket Closed • Close Date:")
+        .setFooter(" © TeaNetwork • Ticket Closed • Close Date:")
         .setTimestamp();
 
     var ticketChannel = message.member.guild.channels.cache.find(channel => channel.name === "log");

@@ -52,7 +52,7 @@ client.on("messageDelete", messageDeleted => {
         .setAuthor(`${messageDeleted.author.tag}`, `${messageDeleted.author.avatarURL({size:4096})}`)
         .setDescription(respone)
         .setTimestamp()
-        .setFooter("Date")
+        .setFooter(" © TeaNetwork • Date")
         .setColor("PURPLE");
 
     client.channels.cache.find(c => c.name == "log").send(embed);
@@ -79,7 +79,7 @@ client.on("guildMemberAdd", member => {
         • Server: #*SOON*
         • Contact Us: TeaNetwork0@gmail.com`)
         .setColor("PURPLE")
-        .setFooter("Joined at ")
+        .setFooter(" © TeaNetwork • Joined at ")
         .setTimestamp();
 
     channel.send(joinEmbed);

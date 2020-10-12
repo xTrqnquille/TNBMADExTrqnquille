@@ -30,7 +30,7 @@ module.exports.run = async(client, message, args) => {
         .setFooter(message.member.displayName)
         .setTimestamp()
         .setThumbnail(`https://i.imgur.com/8V0b6RZ.jpg`)
-        .setFooter(`© xTrqn Development`, `https://i.imgur.com/8V0b6RZ.jpg`)
+        .setFooter(` © TeaNetwork •`, `https://i.imgur.com/8V0b6RZ.jpg`)
         .setDescription(`**Gebanned: ** ${banUser} (${banUser.id})
         ** Geband door: ** ${message.author}
         ** Reden: ** ${reason}`);

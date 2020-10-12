@@ -37,10 +37,9 @@ module.exports.run = async (client, message, args) => {
     var announceEmbed = new discord.MessageEmbed()
         .setTitle(`${options.titel}`)
         .setColor(options.kleur)
-        .setThumbnail(`https://i.imgur.com/EU1zAXv.jpg`)
-        .setFooter(`© TeaNetwork`, `https://i.imgur.com/EU1zAXv.jpg`)        
+        .setThumbnail(`https://i.imgur.com/EU1zAXv.jpg`)     
         .setDescription(`${options.bericht}`)
-        .setFooter(`Verstuurd door: ${message.author.tag}`)
+        .setFooter(` © TeaNetwork`, `https://i.imgur.com/EU1zAXv.jpg`, `Verstuurd door: ${message.author.tag}`)
         .setTimestamp();
  
     var channel = message.member.guild.channels.cache.find(channel => channel.name === options.kanaal);
