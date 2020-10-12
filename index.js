@@ -86,7 +86,7 @@ client.on("guildMemberAdd", member => {
  
 });
 
-var swearWords = ["Kanker", "KKR", "kkr", "Tering", "Kut", "kanker", "kut", "ashole", "cancer", "Cancer", "tering", "GVD", "gvd",]
+var swearWords = ["Kanker","https://", "KKR", "kkr", "Tering", "Kut", "kanker","kk","k4nker", "kut", "ashole", "cancer", "Cancer", "tering", "GVD", "gvd",]
 
 client.on("message", async message =>{
 
@@ -103,10 +103,11 @@ client.on("message", async message =>{
 
             message.delete();
 
-            return message.reply("No Swearing Please").then(msg => msg.delete({ timeout: 3000 }));
+            return message.reply("Dit Alstublieft niet zeggen.").then(msg => msg.delete({ timeout: 3000 }));
         }
         
     }
+
 
     var prefix = botConfig.prefix;
 

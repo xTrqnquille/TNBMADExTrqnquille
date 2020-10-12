@@ -3,37 +3,37 @@ const discord = require ("discord.js")
 module.exports.run = async(client, message, args) => {
 
 
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("You need Permissions for that command!");
+    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("U Heeft Permissions voor dat command nodig");
 
-    if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("No Perms");
+    if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("Geen Permissions!");
     
-    if (!args[1]) return message.reply("No user Selected.");
+    if (!args[1]) return message.reply("Geen **Gebruiker** Aangegeven.");
 
-    if (!args[2]) return message.reply("No Reason Selected.");
+    if (!args[2]) return message.reply("Geen **Reden** Aangegeven.");
 
     var kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
 
     var reason = args.slice(2).join(" ");
 
-    if(!kickUser) return message.reply("User not found");
+    if(!kickUser) return message.reply("Gebruiker niet gevonden");
 
     var embedPrompt = new discord.MessageEmbed()
         .setColor("#8a2be2")
-        .setTitle("You got 30 Seconds to react")
+        .setTitle("U heeft 30 seconden om te reageren")
         .setThumbnail(`https://i.imgur.com/8V0b6RZ.jpg`)
         .setTimestamp()
-        .setFooter(`© xTrqn Development`, `https://i.imgur.com/8V0b6RZ.jpg`)
-        .setDescription(`Do you want to kick ${kickUser}?`);
+        .setFooter(`© TeaNetwork`, `https://i.imgur.com/8V0b6RZ.jpg`)
+        .setDescription(`Weet u zeker dat u ${kickUser} wilt kicken?`);
 
     var embed = new discord.MessageEmbed()
         .setColor("#8a2be2")
         .setFooter(message.member.displayName)
         .setTimestamp()
         .setThumbnail(`https://i.imgur.com/8V0b6RZ.jpg`)
-        .setFooter(`© xTrqn Development`, `https://i.imgur.com/8V0b6RZ.jpg`)
+        .setFooter(`© TeaNetwork`, `https://i.imgur.com/8V0b6RZ.jpg`)
         .setDescription(`**Kicked: ** ${kickUser} (${kickUser.id})
-        ** Kicked By: ** ${message.author}
-        ** Reason: ** ${reason}`);
+        ** Gekicked door: ** ${message.author}
+        ** Reden: ** ${reason}`);
 
     message.channel.send(embedPrompt).then(async msg => {
 
@@ -44,7 +44,7 @@ module.exports.run = async(client, message, args) => {
             msg.delete();
 
             kickUser.kick(reason).catch(err => {
-                if (err) return message.reply("There is a Error!");
+                if (err) return message.reply("Er is een fout");
             });
 
             message.channel.send(embed);
@@ -53,7 +53,7 @@ module.exports.run = async(client, message, args) => {
 
             msg.delete();
 
-            message.reply("kick canceled").then(m => m.delete(5000));
+            message.reply("kick Geannuleerds").then(m => m.delete(5000));
 
         }
     });
