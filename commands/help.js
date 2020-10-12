@@ -8,10 +8,10 @@ module.exports.run = async(bot, message, args) => {
 
         message.author.send(text);
 
-        message.reply("I have send all the commands in your PM")
+        message.reply("Ik heb alle commands in uw Dm gestuurd.")
 
     }catch(error){
-        message.reply("There is a Error Please Contact the Developer")
+        message.reply("Er is iets fout gegaan")
     }
 
 }
