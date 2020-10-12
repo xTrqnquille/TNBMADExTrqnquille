@@ -2,61 +2,61 @@ const discord = require ("discord.js")
 
 module.exports.run = async(client, message, args) => {
 
-    if (!args[0]) return message.reply("Use <Rock, Paper, Scissors>")
+    if (!args[0]) return message.reply("Gebruik <Steen, Papier, Schaar>")
 
-    var options = ["Rock", "Paper", "Scissors"];
+    var options = ["Steen", "Papier", "Schaar"];
 
     var result = options[Math.floor(Math.random() * options.length)];
 
-    if (args[0].toUpperCase() == "ROCK") {
+    if (args[0].toUpperCase() == "STEEN") {
 
-        if(result == "Scissors") {
+        if(result == "Schaar") {
 
-        return message.channel.send(`I got ${result} :scissors:, You WON GG!`);
+        return message.channel.send(`Ik Heb ${result} :scissors:, You WON GG!`);
 
-    } else if(result == "Paper") {
+    } else if(result == "Papier") {
 
-        return message.channel.send(`I got ${result} :notepad_spiral:, I WON GG!`);
+        return message.channel.send(`Ik Heb ${result} :notepad_spiral:, I WON GG!`);
 
-    } else if(result == "Rock") {
+    } else if(result == "Steen") {
 
-        return message.channel.send(`I got ${result} :moyai:, it's a tie GG!`);
-
-        }
-    
-    }
-
-else if (args[0].toUpperCase() == "PAPER") {
-
-        if(result == "Paper") {
-
-        return message.channel.send(`I got ${result} :notepad_spiral:, it's a tie GG!!`);
-
-    } else if(result == "Scissors") {
-
-        return message.channel.send(`I got ${result} :scissors:, I WON GG!`);
-
-    } else if(result == "Rock") {
-
-        return message.channel.send(`I got ${result} :moyai:, You WON GG!`);
+        return message.channel.send(`Ik Heb ${result} :moyai:, it's a tie GG!`);
 
         }
     
     }
 
-    else if (args[0].toUpperCase() == "SCISSORS") {
+else if (args[0].toUpperCase() == "PAPIER") {
 
-        if(result == "Scissors") {
+        if(result == "Papier") {
 
-        return message.channel.send(`I got ${result} :scissors:, it's a tie GG!!`);
+        return message.channel.send(`Ik heb ${result} :notepad_spiral:, it's a tie GG!!`);
 
-    } else if(result == "Rock") {
+    } else if(result == "Schaar") {
 
-        return message.channel.send(`I got ${result} :moyai:, I WON GG!`);
+        return message.channel.send(`Ik heb ${result} :scissors:, I WON GG!`);
 
-    } else if(result == "Paper") {
+    } else if(result == "Steen") {
 
-        return message.channel.send(`I got ${result} :notepad_spiral:, You WON GG!`);
+        return message.channel.send(`Ik heb ${result} :moyai:, You WON GG!`);
+
+        }
+    
+    }
+
+    else if (args[0].toUpperCase() == "SCHAAR") {
+
+        if(result == "Schaar") {
+
+        return message.channel.send(`Ik heb ${result} :scissors:, Het is gelijk spel GG!!`);
+
+    } else if(result == "Steen") {
+
+        return message.channel.send(`Ik heb ${result} :moyai:, Ik win GG!`);
+
+    } else if(result == "Papier") {
+
+        return message.channel.send(`Ik heb ${result} :notepad_spiral:, Jij wint GG!`);
 
         }
     
@@ -68,5 +68,5 @@ else if (args[0].toUpperCase() == "PAPER") {
 
 
 module.exports.help = {
-    name: "rps"
+    name: "sps"
 }

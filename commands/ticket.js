@@ -14,7 +14,7 @@ module.exports.run = async(bot, message, args) => {
         if (channel.name == username.toLowerCase() + "-" + userDiscriminator) {
             ticketBestaat = true;
 
-            message.reply("You already have a ticket");
+            message.reply("U heeft al een ticket");
 
             return;
         }
@@ -24,8 +24,8 @@ module.exports.run = async(bot, message, args) => {
     if (ticketBestaat) return;
 
     var embed = new discord.MessageEmbed()
-        .setTitle("Hoi " + message.author.username)
-        .setFooter("Ticket Created");
+        .setTitle("Goededag " + message.author.username)
+        .setFooter("Ticket gemaakt");
 
     message.channel.send(embed);
 
@@ -51,20 +51,20 @@ module.exports.run = async(bot, message, args) => {
                     });
 
                     var embedParent = new discord.MessageEmbed()
-                    .setTitle(`Hi ${message.author.username}`)
-                    .setDescription("Thanks for your support, our Staff-Team will help you as soon as possible. \n Ask your question, and in 24 hours, you hopefully get an answer! \n Greetings!")
-                    .setFooter(`Date`)
+                    .setTitle(`Goededag ${message.author.username}`)
+                    .setDescription("Bedankt voor uw Ticket, ons Staff-Team zal u zo snel mogelijk helpen. \n Stel uw vraag, en binnen 24 uur krijgt u een antwoord! \n Veel succes!")
+                    .setFooter(`Datum`)
                     .setColor("PURPLE")
                     .setTimestamp()
 
                 settedParent.send(embedParent);
                 }
             ).catch(err => {
-                message.channel.send("There is a Error contact the Developer for more information");
+                message.channel.send("Er is een fout");
             });
         }
     ).catch(err => {
-        message.channel.send("There is a Error contact the Developer for more information");
+        message.channel.send("Er is een fout");
     });
 
 }

@@ -22,7 +22,7 @@ module.exports.run = async(client, message, args) => {
         .setTitle("U heeft 30 seconden om te reageren")
         .setThumbnail(`https://i.imgur.com/8V0b6RZ.jpg`)
         .setTimestamp()
-        .setFooter(`© TeaNetwork`, `https://i.imgur.com/8V0b6RZ.jpg`)
+        .setFooter(`© TeaNetwork`, `https://i.imgur.com/EU1zAXv.jpg`)
         .setDescription(`Weet u zeker dat u ${kickUser} wilt kicken?`);
 
     var embed = new discord.MessageEmbed()
@@ -30,7 +30,7 @@ module.exports.run = async(client, message, args) => {
         .setFooter(message.member.displayName)
         .setTimestamp()
         .setThumbnail(`https://i.imgur.com/8V0b6RZ.jpg`)
-        .setFooter(`© TeaNetwork`, `https://i.imgur.com/8V0b6RZ.jpg`)
+        .setFooter(`© TeaNetwork`, `https://i.imgur.com/EU1zAXv.jpg`)
         .setDescription(`**Kicked: ** ${kickUser} (${kickUser.id})
         ** Gekicked door: ** ${message.author}
         ** Reden: ** ${reason}`);
