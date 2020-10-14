@@ -86,7 +86,7 @@ client.on("guildMemberAdd", member => {
  
 });
 
-var swearWords = ["Kanker","https://", " KKR ", " kkr ", " Tering ", " Kut ", " kanker "," kk "," k4nker ", " kut ", " ashole ", " cancer ", " Cancer ", " tering ", " GVD ", " gvd ",]
+var swearWords = ["Kanker","https://", "KKR", "kkr", "Tering", "Kut", "kanker","k4nker", "kut", "ashole", "cancer", "Cancer", "tering", "GVD", "gvd",]
 
 client.on("message", async message =>{
 
