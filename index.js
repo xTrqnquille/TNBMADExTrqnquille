@@ -75,8 +75,8 @@ client.on("guildMemberAdd", member => {
         .setDescription(`**Welcome**
         *${member.user.username}*  To **TeaNetwork**
         
-        • Website: #*SOON*
-        • Server: #*SOON*
+        • Website: *TeaNetwork.craftingstore.net*
+        • Server: *TeaNetwork.mine.gg*
         • Contact Us: TeaNetwork0@gmail.com`)
         .setColor("PURPLE")
         .setFooter(" © TeaNetwork • Joined at ")
