@@ -29,7 +29,7 @@ module.exports.run = async(client, message, args) => {
 
         var emoji = await promptMessage(msg, message.author, 60, ["✅", "❌"]);
 
-        if (emoji === "✅") {
+    if (emoji === "✅") {
 
             message.channel.send(redenEmbed).then(msg => msg.delete({ timeout: 10000 }));
 
