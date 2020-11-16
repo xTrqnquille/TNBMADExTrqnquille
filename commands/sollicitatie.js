@@ -80,7 +80,7 @@ module.exports.run = async(client, message, args) => {
                         .setColor("PURPLE")
                         .setDescription("Voor welke Functie solliciteert u?");
 
-                    var Waarom = new discord.MessageEmbed()
+                    var WaaromJij = new discord.MessageEmbed()
                         .setTitle("Waarom" + message.author.username)
                         .setColor("PURPLE")
                         .setDescription("Waarom wilt u hier werken?");
@@ -90,10 +90,10 @@ module.exports.run = async(client, message, args) => {
                         .setColor("PURPLE")
                         .setDescription("Wat is Uw Motivatie om hier te werken?");
 
-                    var WaaromJij = new discord.MessageEmbed()
-                        .setTitle("Waarom Jij" + message.author.username)
+                    var PlusEnMin = new discord.MessageEmbed()
+                        .setTitle("+/-" + message.author.username)
                         .setColor("PURPLE")
-                        .setDescription("Waarom Jij en Geen ander?");
+                        .setDescription("Plus en min punten");
 
                     var Verdereaanvullingen = new discord.MessageEmbed()
                         .setTitle("Verdere Aanvullingen" + message.author.username)
@@ -123,7 +123,7 @@ module.exports.run = async(client, message, args) => {
 
                                 settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
                                     var antwoord4 = antwoord.first();;
-                                    settedParent.send(Waarom);
+                                    settedParent.send(WaaromJij);
 
                                     settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
                                         var antwoord5 = antwoord.first();;
@@ -131,7 +131,7 @@ module.exports.run = async(client, message, args) => {
 
                                         settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
                                             var antwoord6 = antwoord.first();;
-                                            settedParent.send(WaaromJij);
+                                            settedParent.send(PlusEnMin);
 
                                             settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
                                                 var antwoord7 = antwoord.first();;
@@ -140,12 +140,13 @@ module.exports.run = async(client, message, args) => {
                                                 settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
                                                     var antwoord8 = antwoord.first();;
                                                     settedParent.send(vragen);
+                                                    
 
                                                     var uitkomst = new discord.MessageEmbed()
                                                         .setTitle("Bedankt voor de sollicitatie!")
                                                         .setColor("PURPLE")
                                                         .setTimestamp()
-                                                        .setDescription(`**Naam:** \n${antwoord1} \n**Leeftijd:** \n${antwoord2}\n**MineCraftNaam:** \n${antwoord3}\n**Functie:** \n${antwoord4}\n**Waarom:** \n${antwoord5}\n**Motivatie:** \n${antwoord6}\n**Verdereaanvullingen:** \n${antwoord7}\n**vragen:** \n${antwoord8}`);
+                                                        .setDescription(`**Naam:** \n${antwoord1} \n**Leeftijd:** \n${antwoord2}\n**MineCraftNaam:** \n${antwoord3}\n**Functie:** \n${antwoord4}\n**WaaromJij:** \n${antwoord5}\n**Motivatie:** \n${antwoord6}\n**+/- Punten:** \n${antwoord6}\n**Verdereaanvullingen:** \n${antwoord7}\n**vragen:** \n${antwoord8}`);
                                                     
                                                     settedParent.bulkDelete(14).then(
                                                         settedParent.send(uitkomst)
