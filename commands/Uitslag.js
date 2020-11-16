@@ -27,7 +27,7 @@ module.exports.run = async(client, message, args) => {
 
         message.delete();
 
-        var emoji = await promptMessage(msg, message.author, 60, ["✅", "❌"]);
+        var emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
 
     if (emoji === "✅") {
 
