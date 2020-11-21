@@ -116,7 +116,6 @@ client.on("message", async message =>{
 
     var command = messageArray[0];
 
-    RandomXP();
 
 
     var arguments = messageArray.slice(1);
@@ -129,46 +128,6 @@ client.on("message", async message =>{
 
     if(commands) commands.run(client, message, arguments, options);
 
-
     });
-
-function RandomXP(message){
-
-    var randomNumber = Math.floor(Math.random() * 15) + 1;
-
-    var idUser = message.author.id;
-
-    if (!levelFile[idUser]) {
-        levelFile[idUser] = {
-            xp: 0,
-            level: 0
-        }
-    }
-
-    levelFile[idUser].xp += randomNumber;
-
-    var levelUser = levelFile[idUser].level;
-    var xpUser = levelFile[idUser].xp;
-
-    var nextLevelXp = levelUser * 300;
-
-    if (nextLevelXp == 0) nextLevelXp = 100;
-
-    if (xpUser >= nextLevelXp) {
-
-        levelFile[idUser].level += 1;
-
-        fs.writeFile("./data/levels.json", JSON.stringify(levelFile), err => {
-            if (err) console.log(err);
-        });
-
-    var embedLevel = discord.MessageEmbed()
-        .setDescription("**Level Up**")
-        .setColor("PURPLE")
-        .addField("Nieuw level: ", levelFile[idUser].level);
-    message.channel.send(embedLevel);
-    }
-
-}
 
 client.login(process.env.token);

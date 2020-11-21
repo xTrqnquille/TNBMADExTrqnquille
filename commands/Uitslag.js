@@ -21,7 +21,7 @@ module.exports.run = async(client, message, args) => {
     var redenEmbed = new discord.MessageEmbed()
         .setTitle("Reden")
         .setColor("PURPLE")
-        .addField(`Reden:`, 'Vertel een reden', false);
+        .addField(`Reden:`, 'Vertel een reden.', false);
 
     message.channel.send(kiesEmbed).then(async msg => {
 
